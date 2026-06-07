@@ -4,17 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moataz Mansour - Android Developer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Android Developer portfolio of Moataz Mansour. Fresh CS graduate specializing in Kotlin, Jetpack Compose, and Clean Architecture.">
+    <meta name="author" content="Moataz Mansour">
+    <meta property="og:title" content="Moataz Mansour - Android Developer">
+    <meta property="og:description" content="Android Developer specializing in Kotlin, Jetpack Compose, and Clean Architecture.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mezoinnit.github.io">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/62043342?v=4">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Moataz Mansour - Android Developer">
+    <meta name="twitter:description" content="Android Developer specializing in Kotlin, Jetpack Compose, and Clean Architecture.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/62043342?v=4">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NG1HVGB1R5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NG1HVGB1R5');
+    </script>
 </head>
 <body>
+
+    <!-- Page Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <svg width="60" height="60" viewBox="0 0 100 100">
+                    <path d="M30 52 C30 38 70 38 70 52 L70 62 C70 64 68 66 66 66 L34 66 C32 66 30 64 30 62 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="40" cy="50" r="3" fill="#fff"/>
+                    <circle cx="60" cy="50" r="3" fill="#fff"/>
+                    <line x1="40" y1="38" x2="36" y2="28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="60" y1="38" x2="64" y2="28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">M</a>
+            <a href="#hero" class="nav-logo">
+                <svg width="24" height="24" viewBox="0 0 100 100">
+                    <path d="M30 52 C30 38 70 38 70 52 L70 62 C70 64 68 66 66 66 L34 66 C32 66 30 64 30 62 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="40" cy="50" r="3" fill="#fff"/>
+                    <circle cx="60" cy="50" r="3" fill="#fff"/>
+                    <line x1="40" y1="38" x2="36" y2="28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="60" y1="38" x2="64" y2="28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
@@ -375,6 +428,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
 </body>
 </html>
