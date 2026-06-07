@@ -10,28 +10,6 @@ window.addEventListener('load', () => {
 });
 
 // ========================================
-// NAVIGATION
-// ========================================
-const nav = document.getElementById('nav');
-const navToggle = document.getElementById('navToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileLinks = mobileMenu.querySelectorAll('a');
-
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-navToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-});
-
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
-});
-
-// ========================================
 // SCROLL ANIMATIONS (Intersection Observer)
 // ========================================
 const fadeElements = document.querySelectorAll('.fade-in');
@@ -222,40 +200,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// ========================================
-// ACTIVE NAV LINK HIGHLIGHT
-// ========================================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-function updateActiveLink() {
-    const scrollPos = window.scrollY + 150;
-
-    sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.getAttribute('id');
-
-        if (scrollPos >= top && scrollPos < top + height) {
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href') === `#${id}`) {
-                    link.style.color = '#ffffff';
-                }
-            });
-        }
-    });
-}
-
-window.addEventListener('scroll', updateActiveLink);
-
-// ========================================
-// KEYBOARD ACCESSIBILITY
-// ========================================
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-    }
 });
