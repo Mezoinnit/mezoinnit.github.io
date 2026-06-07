@@ -201,3 +201,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ========================================
+// RESUME MODAL
+// ========================================
+const resumeModal = document.getElementById('resumeModal');
+const resumeBtn = document.getElementById('resumeBtn');
+const modalClose = document.getElementById('modalClose');
+const modalOverlay = document.getElementById('modalOverlay');
+const modalIframe = document.getElementById('modalIframe');
+
+if (resumeBtn && resumeModal) {
+    resumeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (modalIframe) {
+            modalIframe.src = 'moataz_mansour_resume.html';
+        }
+    });
+
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (modalIframe) {
+            modalIframe.src = '';
+        }
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}

@@ -66,7 +66,7 @@
                 <p class="hero-desc fade-in">Fresh Computer Science graduate passionate about building clean, user-centric Android applications. Specializing in modern Android development with Kotlin, Jetpack Compose, and Clean Architecture.</p>
                 <div class="hero-cta fade-in">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="#" class="btn btn-outline" id="resumeBtn">View Resume</a>
                 </div>
                 <div class="hero-social fade-in">
                     <a href="https://github.com/Mezoinnit" target="_blank" rel="noopener" aria-label="GitHub">
@@ -391,6 +391,45 @@
             <p class="footer-text">&copy; 2026 Moataz Mansour. Built with passion.</p>
         </div>
     </footer>
+
+    <!-- Resume Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="resumeModal">
+            <div class="modal-header">
+                <span class="modal-title">Resume - Moataz Mansour</span>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="modalIframe" title="Resume"></iframe>
+            </div>
+            <div class="modal-footer">
+                <span class="modal-footer-text">Preview Mode</span>
+                <div class="modal-footer-actions">
+                    <a href="moataz_mansour_resume.html" target="_blank" class="modal-download-btn modal-btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Open Full Page
+                    </a>
+                    <a href="moataz_mansour_resume.pdf" download="Moataz_Mansour_Resume.pdf" class="modal-download-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.min.js"></script>
 </body>
