@@ -131,18 +131,6 @@ if (heroTitle) {
 }
 
 // ========================================
-// PARALLAX HERO IMAGE
-// ========================================
-const heroImage = document.querySelector('.hero-image-wrapper');
-if (heroImage) {
-    document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 20;
-        const y = (e.clientY / window.innerHeight - 0.5) * 20;
-        heroImage.style.transform = `translate(${x}px, ${y}px)`;
-    });
-}
-
-// ========================================
 // 3D CARD TILT EFFECT
 // ========================================
 const projectCards = document.querySelectorAll('.project-card');
